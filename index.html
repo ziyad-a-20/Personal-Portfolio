@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ziyad A - Aspiring Developer | B.Com(CA) Graduate">
+    <title>Ziyad A | Portfolio</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Portfolio.</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+                <li><a href="#projects"><i class="fas fa-briefcase"></i> <span>Projects</span></a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-text">
+                    <h1 class="hero-name">Ziyad A</h1>
+                    <p class="hero-role">Aspiring Developer | B.Com(CA) Graduate</p>
+                    <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Madurai, India</p>
+                    <p class="hero-intro">I'm a passionate web development enthusiast eager to contribute to forward-thinking organizations where I can apply my skills, continue learning, and make meaningful contributions.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                        <a href="assets/ziyad_resume.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="assets/photo.jpg" alt="Ziyad A" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-user-circle"></i> About Me</h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+                <p>I'm a passionate web development enthusiast from Madurai, holding a Bachelor's degree in Commerce with a specialization in Computer Applications from The American College
+                <p>I enjoy building applications that solve real-world problems and am always eager to learn new technologies and best practices. I'm looking forward to contributing to a forward-thinking organization where I can apply my skills, continue growing, and make a positive impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-code"></i> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-item"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item"><i class="fab fa-python"></i> Flask</span>
+                        <span class="skill-item"><i class="fab fa-python"></i> Python</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database</h3>
+                    <div class="skill-list">
+                        <span class="skill-item"><i class="fas fa-database"></i> MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-item"><i class="fab fa-github"></i> GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-briefcase"></i> Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <h3>Himalaya Lip Care Showcase</h3>
+                    <p class="project-description">A web application showcasing Himalaya lip care products built with Flask and MySQL.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-tag"><i class="fab fa-python"></i> Flask</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                    </div>
+                    <a href="https://github.com/ziyad-a-20/himalaya-lipbalm-flask-app" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon"><i class="fas fa-book"></i></div>
+                    <h3>Library Management System</h3>
+                    <p class="project-description">A comprehensive library management system for tracking books and members.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag"><i class="fab fa-python"></i> Flask</span>
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                    </div>
+                    <a href="https://github.com/ziyad-a-20/Library-Management-System" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-icon"><i class="fas fa-tv"></i></div>
+                    <h3>Tokyo Revengers Fan Portal</h3>
+                    <p class="project-description">A fan portal website for Tokyo Revengers anime with character information and gang details.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag"><i class="fab fa-python"></i> Flask</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                    </div>
+                    <a href="https://github.com/ziyad-a-20/Tokyo-Revengers-Gang-Character-Hub" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Landing Page</h3>
+                    <p class="project-description">A modern, responsive landing page built with pure HTML, CSS, and JavaScript.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                    <a href="https://github.com/ziyad-a-20/landing-page" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-icon"><i class="fas fa-hotel"></i></div>
+                    <h3>Hotel Management System</h3>
+                    <p class="project-description">A simple Python + MySQL project that helps manage a hotel's daily tasks. It lets you add employees, customers, and food items, take orders, generate bills, and view purchase history—all from a clean menu-based CLI.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                    </div>
+                    <a href="https://github.com/ziyad-a-20/Hotel-Management-System" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="education-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-university"></i></div>
+                    <h3>Bachelor of Commerce in Computer Application</h3>
+                    <p class="institution"><i class="fas fa-school"></i> The American College</p>
+                    <p class="duration"><i class="far fa-calendar-alt"></i> 2023 – 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-envelope"></i> Get In Touch</h2>
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your team.</p>
+                <div class="contact-links">
+                    <a href="mailto:ziyad.official.a@gmail.com" class="contact-link">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span>ziyad.official.a@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/ziyad-a-20" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span class="contact-icon"><i class="fab fa-github"></i></span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/ziyad-a-324171366" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+                <div class="resume-download">
+                    <a href="assets/ziyad_resume.pdf" download class="btn btn-primary"><i class="fas fa-file-download"></i> Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Ziyad A. All rights reserved.</p>
+                    <p class="footer-note"><i class="fas fa-code"></i> Built with HTML, CSS, and JavaScript</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/ziyad-a-20" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ziyad-a-324171366" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ziyad.official.a@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
