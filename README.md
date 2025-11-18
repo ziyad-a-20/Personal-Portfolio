@@ -34,7 +34,7 @@ The site includes sections for my skills, projects, education, and ways to get i
 ---
 
 ## 🚀 Live Demo
-
+https://personal-portfolio-snowy-phi.vercel.app/
 
 ---
 
