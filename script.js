@@ -97,3 +97,20 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+// BACK TO TOP BUTTON
+const backBtn = document.getElementById("backToTop");
+
+// Show/Hide
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    backBtn.classList.add("show");
+  } else {
+    backBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top
+backBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
