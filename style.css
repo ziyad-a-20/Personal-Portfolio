@@ -1195,10 +1195,7 @@ section {
   visibility: visible;
   transform: translateY(-8px);
 }
-.back-to-top:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-12px);
-}
+
 
 /* RESPONSIVE  */
 @media (max-width: 768px) {
@@ -1228,148 +1225,80 @@ section {
     display: flex;
   }
 
-  /* hero: keep layout stacked but make buttons side-by-side and center the photo orb */
   .hero-content {
-    display: flex;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-role {
+    font-size: 1.2rem;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    gap: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .footer-content {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 1.2rem;
-    padding-bottom: 2.4rem;
   }
 
-  .hero-text {
-    order: 1;
-    width: 100%;
-    max-width: 720px;
-    padding: 0 1rem;
-  }
-
-  .hero-image {
-    order: 2;
-    display: flex;
+  .footer-social {
     justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-top: 8px;
-    z-index: 1;
-    /* ensure the orb always centers on the photo container */
-    min-height: 280px;
   }
 
-  /* center glow/orb behind the photo on mobile and keep it directly under the profile-photo */
-  .hero-image::before,
-  .hero-image::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0; /* keep behind the photo */
+  .section-title {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .hero-image::before {
-    width: 260px; /* smaller on mobile */
-    height: 260px;
-    margin-left: 0;
-  }
-  .hero-image::after {
-    width: 200px;
-    height: 200px;
-    margin-left: 0;
-  }
-
-  /* Constrain the profile image and keep it circular */
-  .profile-photo {
-    width: 170px;
-    height: 170px;
-    max-width: 40vw;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    border: 6px solid rgba(255,255,255,0.03);
-    box-shadow: 0 18px 50px rgba(2,6,23,0.6);
-    background: transparent;
-    z-index: 2; /* ensure photo sits above the spinning orb */
-    position: relative;
-  }
-
-  /* Buttons: forced side-by-side on tablet/large mobile and centered */
-  .hero-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-
-  .hero-buttons .btn {
-    flex: 0 1 48%;
-    min-width: 140px;
-    max-width: 48%;
-  }
-
-  /* keep small screens usable by allowing wrap if extremely narrow */
-  .hero-buttons .btn + .btn {
-    margin-left: 0;
+  .section-title i {
+    font-size: 1.5rem;
   }
 }
 
-/* Extra small phones */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+  }
+
   .profile-photo {
-    width: 140px;
-    height: 140px;
-    max-width: 46vw;
-    border-width: 5px;
+    width: 200px;
+    height: 200px;
   }
 
-  /* keep orb centered under the profile on extra small screens */
-  .hero-image::before {
-    width: 220px;
-    height: 220px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
-  .hero-image::after {
-    width: 160px;
-    height: 160px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-  }
-
-  /* Keep buttons side-by-side when possible; allow stack only under very narrow widths */
-  .hero-buttons {
-    gap: 10px;
-  }
-  .hero-buttons .btn {
-    flex: 0 1 48%;
-    min-width: 120px;
-    max-width: 48%;
-  }
-
-  /* If viewport is too narrow, switch to stacked layout for accessibility */
-  @media (max-width: 340px) {
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-    .hero-buttons .btn {
-      width: 100%;
-      max-width: 320px;
-      flex: none;
-    }
-  }
-
-  .hero-buttons .btn { min-width: 140px; width: auto; }
-  .hero-name { font-size: 2rem; }
 }
