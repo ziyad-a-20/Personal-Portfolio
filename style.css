@@ -1196,6 +1196,7 @@ section {
   transform: translateY(-8px);
 }
 
+
 /* RESPONSIVE  */
 @media (max-width: 768px) {
   .nav-menu {
@@ -1226,7 +1227,7 @@ section {
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 4rem !important;
+    gap: 2rem;
     text-align: center;
   }
 
@@ -1238,18 +1239,18 @@ section {
     font-size: 1.2rem;
   }
 
-  .hero-location {
-    justify-content: center; 
-    text-align: center; 
-  }
-
   .hero-image {
-    margin-top: 4rem !important; 
+    margin-top: 2.5rem; 
   }
 
   .hero-image::before {
     width: 280px;
     height: 280px;
+  }
+ 
+  .hero-location {
+    justify-content: center; /* Center the content */
+    text-align: center; 
   }
 
   .profile-photo {
@@ -1305,12 +1306,8 @@ section {
     font-size: 1rem;
   }
 
-  .hero-content {
-    gap: 3.5rem !important;
-  }
-
   .hero-image {
-    margin-top: 3.5rem !important;
+    margin-top: 2rem;
   }
 
   .hero-image::before {
