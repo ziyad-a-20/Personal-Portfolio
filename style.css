@@ -1239,12 +1239,17 @@ section {
   }
 
   .hero-location {
-    justify-content: center; /* Center the content */
-    text-align: center; /* Ensure text is centered */
+    justify-content: center; 
+    text-align: center; 
   }
 
   .hero-image {
-    margin-top: 4rem !important; /* adds clean space between buttons and photo */
+    margin-top: 4rem !important; 
+  }
+
+  .hero-image::before {
+    width: 280px;
+    height: 280px;
   }
 
   .profile-photo {
@@ -1306,6 +1311,11 @@ section {
 
   .hero-image {
     margin-top: 3.5rem !important;
+  }
+
+  .hero-image::before {
+    width: 220px;
+    height: 220px;
   }
 
   .profile-photo {
