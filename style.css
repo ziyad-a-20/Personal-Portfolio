@@ -1281,6 +1281,12 @@ section {
   .section-title i {
     font-size: 1.5rem;
   }
+
+  /* Add this rule to center "Madurai, India" in mobile view */
+  .hero-location {
+    justify-content: center; /* Center the content */
+    text-align: center; /* Ensure text is centered */
+  }
 }
 
 @media (max-width: 480px) {
