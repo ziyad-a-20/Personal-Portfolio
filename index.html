@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Ziyad A - Aspiring Developer | B.Com(CA) Graduate">
+    <meta property="og:title" content="Ziyad A | Developer Portfolio">
+    <meta property="og:description" content="Aspiring Developer skilled in HTML, CSS, JS, Python, Flask, MySQL">
+    <meta property="og:image" content="assets/photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://personal-portfolio-snowy-phi.vercel.app/">
+
     <title>Ziyad A | Portfolio</title>
     
     <!-- Font Awesome Icons -->
@@ -30,7 +36,7 @@
                 <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -49,11 +55,11 @@
                     <p class="hero-intro">I'm a passionate web development enthusiast eager to contribute to forward-thinking organizations where I can apply my skills, continue learning, and make meaningful contributions.</p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
-                        <a href="assets/ziyad_resume.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
+                        <a rel="prefetch" href="assets/ziyad_resume.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
                     </div>
                 </div>
-                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
-                    <img src="assets/photo.jpg" alt="Ziyad A" class="profile-photo" loading="lazy">
+                <div class="hero-image" data-aos="fade-left" data-aos-anchor-placement="top-center" data-aos-delay="200">
+                    <img src="assets/photo.jpg" alt="Portrait of Ziyad A" class="profile-photo" loading="lazy">
                 </div>
             </div>
         </div>
@@ -64,7 +70,7 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up"><i class="fas fa-user-circle"></i> About Me</h2>
             <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-                <p>I'm a passionate web development enthusiast from Madurai, holding a Bachelor's degree in Commerce with a specialization in Computer Applications from The American College
+                <p>I'm a passionate web development enthusiast from Madurai, holding a Bachelor's degree in Commerce with a specialization in Computer Applications from The American College.</p>
                 <p>I enjoy building applications that solve real-world problems and am always eager to learn new technologies and best practices. I'm looking forward to contributing to a forward-thinking organization where I can apply my skills, continue growing, and make a positive impact.</p>
             </div>
         </div>
@@ -118,6 +124,8 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+
+                    
                     <div class="project-icon"><i class="fas fa-shopping-bag"></i></div>
                     <h3>Himalaya Lip Care Showcase</h3>
                     <p class="project-description">A web application showcasing Himalaya lip care products built with Flask and MySQL.</p>
