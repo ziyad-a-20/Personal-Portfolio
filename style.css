@@ -1195,7 +1195,10 @@ section {
   visibility: visible;
   transform: translateY(-8px);
 }
-
+.back-to-top:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-12px);
+}
 
 /* RESPONSIVE  */
 @media (max-width: 768px) {
@@ -1225,6 +1228,7 @@ section {
     display: flex;
   }
 
+  /* hero: keep layout stacked but make buttons side-by-side and center the photo orb */
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -1248,7 +1252,28 @@ section {
     align-items: center;
     position: relative;
     width: 100%;
-    margin-top: 6px;
+    margin-top: 8px;
+    z-index: 1;
+  }
+
+  /* center glow/orb behind the photo on mobile */
+  .hero-image::before,
+  .hero-image::after {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-image::before {
+    width: 260px; /* smaller on mobile */
+    height: 260px;
+    margin-left: 0;
+  }
+  .hero-image::after {
+    width: 200px;
+    height: 200px;
+    margin-left: 0;
   }
 
   /* Constrain the profile image and keep it circular */
@@ -1262,25 +1287,29 @@ section {
     border: 6px solid rgba(255,255,255,0.03);
     box-shadow: 0 18px 50px rgba(2,6,23,0.6);
     background: transparent;
+    z-index: 2;
   }
 
-  /* Make the decorative glow/orb centered and smaller on mobile.
-     (Overrides any existing ::before/::after sizes placed on .hero-image) */
-  .hero-image::before,
-  .hero-image::after {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+  /* Buttons: forced side-by-side on tablet/large mobile and centered */
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 
-  .hero-image::before {
-    width: 360px;
-    height: 360px;
-    margin-left: 0;
+  .hero-buttons .btn {
+    flex: 0 1 48%;
+    min-width: 140px;
+    max-width: 48%;
   }
-  .hero-image::after {
-    width: 280px;
-    height: 280px;
+
+  /* keep small screens usable by allowing wrap if extremely narrow */
+  .hero-buttons .btn + .btn {
     margin-left: 0;
   }
 }
@@ -1294,18 +1323,32 @@ section {
     border-width: 5px;
   }
 
-  .hero-image::before { width: 280px; height: 280px; }
-  .hero-image::after  { width: 200px; height: 200px; }
+  .hero-image::before { width: 220px; height: 220px; }
+  .hero-image::after  { width: 160px; height: 160px; }
 
-  /* Stack action buttons and keep them centered */
+  /* Keep buttons side-by-side when possible; allow stack only under very narrow widths */
   .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
+    gap: 10px;
   }
-  .hero-buttons .btn { min-width: 200px; width: auto; }
+  .hero-buttons .btn {
+    flex: 0 1 48%;
+    min-width: 120px;
+    max-width: 48%;
+  }
+
+  /* If viewport is too narrow, switch to stacked layout for accessibility */
+  @media (max-width: 340px) {
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-buttons .btn {
+      width: 100%;
+      max-width: 320px;
+      flex: none;
+    }
+  }
+
+  .hero-buttons .btn { min-width: 140px; width: auto; }
   .hero-name { font-size: 2rem; }
 }
