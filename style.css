@@ -1196,7 +1196,6 @@ section {
   transform: translateY(-8px);
 }
 
-
 /* RESPONSIVE  */
 @media (max-width: 768px) {
   .nav-menu {
@@ -1227,7 +1226,7 @@ section {
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 4rem !important;
     text-align: center;
   }
 
@@ -1237,6 +1236,15 @@ section {
 
   .hero-role {
     font-size: 1.2rem;
+  }
+
+  .hero-location {
+    justify-content: center; /* Center the content */
+    text-align: center; /* Ensure text is centered */
+  }
+
+  .hero-image {
+    margin-top: 4rem !important; /* adds clean space between buttons and photo */
   }
 
   .profile-photo {
@@ -1281,12 +1289,6 @@ section {
   .section-title i {
     font-size: 1.5rem;
   }
-
-  /* Add this rule to center "Madurai, India" in mobile view */
-  .hero-location {
-    justify-content: center; /* Center the content */
-    text-align: center; /* Ensure text is centered */
-  }
 }
 
 @media (max-width: 480px) {
@@ -1296,6 +1298,14 @@ section {
 
   .hero-role {
     font-size: 1rem;
+  }
+
+  .hero-content {
+    gap: 3.5rem !important;
+  }
+
+  .hero-image {
+    margin-top: 3.5rem !important;
   }
 
   .profile-photo {
