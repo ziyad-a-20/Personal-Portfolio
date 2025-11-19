@@ -1254,15 +1254,20 @@ section {
     width: 100%;
     margin-top: 8px;
     z-index: 1;
+    /* ensure the orb always centers on the photo container */
+    min-height: 280px;
   }
 
-  /* center glow/orb behind the photo on mobile */
+  /* center glow/orb behind the photo on mobile and keep it directly under the profile-photo */
   .hero-image::before,
   .hero-image::after {
+    position: absolute;
     top: 50%;
     left: 50%;
     right: auto;
     transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0; /* keep behind the photo */
   }
 
   .hero-image::before {
@@ -1287,7 +1292,8 @@ section {
     border: 6px solid rgba(255,255,255,0.03);
     box-shadow: 0 18px 50px rgba(2,6,23,0.6);
     background: transparent;
-    z-index: 2;
+    z-index: 2; /* ensure photo sits above the spinning orb */
+    position: relative;
   }
 
   /* Buttons: forced side-by-side on tablet/large mobile and centered */
@@ -1323,8 +1329,23 @@ section {
     border-width: 5px;
   }
 
-  .hero-image::before { width: 220px; height: 220px; }
-  .hero-image::after  { width: 160px; height: 160px; }
+  /* keep orb centered under the profile on extra small screens */
+  .hero-image::before {
+    width: 220px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .hero-image::after {
+    width: 160px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
 
   /* Keep buttons side-by-side when possible; allow stack only under very narrow widths */
   .hero-buttons {
