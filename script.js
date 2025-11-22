@@ -108,3 +108,18 @@ sliders.forEach((slider) => {
     images[index].classList.add("active");
   }, 3000); // 3 seconds
 });
+
+
+// PROJECT CARD REVEALING
+const cards = document.querySelectorAll('.project-card');
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.classList.remove('active');
+    });
+});
