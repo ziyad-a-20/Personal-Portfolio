@@ -148,26 +148,27 @@
                 <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
 
-                    <div class="project-icon"><i class="fas fa-shopping-bag"></i></div>
-                    <h3>Himalaya Lip Care Showcase</h3>
-                    <p class="project-description">A web application showcasing Himalaya lip care products built with Flask and MySQL.</p>
+                        <div class="project-icon"><i class="fas fa-shopping-bag"></i></div>
+                            <h3>Himalaya Lip Care Showcase</h3>
+                            <p class="project-description">A web application showcasing Himalaya lip care products built with Flask and MySQL.</p>
+                            
+                            <div class="project-tech">
+                                <span class="tech-tag"><i class="fab fa-python"></i> Flask</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                                <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                                <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                                <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            </div>
+                            
+                            <a href="https://github.com/ziyad-a-20/himalaya-lipbalm-flask-app" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                    <div class="project-tech">
-                        <span class="tech-tag"><i class="fab fa-python"></i> Flask</span>
-                        <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
-                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
-                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
-                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
-                    </div>
-
-                    <a href="https://github.com/ziyad-a-20/himalaya-lipbalm-flask-app" target="_blank" rel="noopener noreferrer" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
 
                 <!-- Project 2 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-
+                   
                     <div class="project-icon"><i class="fas fa-book"></i></div>
                     <h3>Library Management System</h3>
                     <p class="project-description">A comprehensive library management system for tracking books and members.</p>
@@ -241,32 +242,83 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+        <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-envelope"></i> Get In Touch</h2>
-            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
-                <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your team.</p>
-                <div class="contact-links">
-                    <a href="mailto:ziyad.official.a@gmail.com" class="contact-link">
-                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                        <span>ziyad.official.a@gmail.com</span>
-                    </a>
-                    <a href="https://github.com/ziyad-a-20" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <span class="contact-icon"><i class="fab fa-github"></i></span>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/ziyad-a-324171366" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
-                        <span>LinkedIn</span>
-                    </a>
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+            <i class="fas fa-envelope"></i> Get In Touch
+        </h2>
+        
+        <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="contact-text">
+                <h3>Let's work together</h3>
+                <p>Have a question or want to collaborate? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.</p>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="info-label">Email</p>
+                            <a href="mailto:ziyad.official.a@gmail.com">ziyad.official.a@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="info-label">Location</p>
+                            <p>Madurai, India</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="resume-download">
-                    <a href="assets/ziyad_resume.pdf" download class="btn btn-primary"><i class="fas fa-file-download"></i> Download Resume</a>
+
+                <div class="contact-socials">
+                    <p class="socials-label">Follow me</p>
+                    <div class="socials-list">
+                        <a href="https://github.com/ziyad-a-20" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ziyad-a-324171366" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" action="https://formspree.io/f/mgvqqwbk" method="POST" id="contactForm">
+
+                    <input type="hidden" name="_next" value="success.html">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
