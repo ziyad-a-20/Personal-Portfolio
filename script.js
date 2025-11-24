@@ -119,3 +119,39 @@ document.querySelectorAll(".project-card").forEach((card) => {
 
   card.addEventListener("mouseleave", () => card.classList.remove("active"));
 });
+
+
+//  Thank you Message
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            form.reset();
+            form.style.display = "none";
+
+            const statusMsg = document.getElementById("form-status");
+            statusMsg.style.display = "block";
+
+            setTimeout(() => {
+                statusMsg.style.display = "none";
+                form.style.display = "block"; 
+            }, 5000);
+
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    } catch (err) {
+        alert("Network error. Please try again later.");
+    }
+});
+

@@ -244,81 +244,82 @@
 
         <!-- Contact Section -->
     <section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title" data-aos="fade-up">
-            <i class="fas fa-envelope"></i> Get In Touch
-        </h2>
-        
-        <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><i class="fas fa-envelope"></i> Get In Touch</h2>
+            
+            <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="contact-text">
-                <h3>Let's work together</h3>
-                <p>Have a question or want to collaborate? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.</p>
-                
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <p class="info-label">Email</p>
-                            <a href="mailto:ziyad.official.a@gmail.com">ziyad.official.a@gmail.com</a>
+                <div class="contact-text">
+                    <h3>Let's work together</h3>
+                    <p>Have a question or want to collaborate? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p class="info-label">Email</p>
+                                <a href="mailto:ziyad.official.a@gmail.com">ziyad.official.a@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p class="info-label">Location</p>
+                                <p>Madurai, India</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <p class="info-label">Location</p>
-                            <p>Madurai, India</p>
+
+                    <div class="contact-socials">
+                        <p class="socials-label">Follow me</p>
+                        <div class="socials-list">
+                            <a href="https://github.com/ziyad-a-20" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/ziyad-a-324171366" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="contact-socials">
-                    <p class="socials-label">Follow me</p>
-                    <div class="socials-list">
-                        <a href="https://github.com/ziyad-a-20" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/ziyad-a-324171366" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <div class="contact-form-wrapper">
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgvqqwbk" method="POST">
 
-            <div class="contact-form-wrapper">
-                <form class="contact-form" action="https://formspree.io/f/mgvqqwbk" method="POST" id="contactForm">
-
-                    <input type="hidden" name="_next" value="https://personal-portfolio-snowy-phi.vercel.app/success.html">
-
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
-            </div>
-
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your name" required>
         </div>
+
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Your email" required>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+
+        <div class="form-group">
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+        </button>
+    </form>
+
+    <!-- Hidden success message -->
+    <div id="form-status" style="display:none;" class="success-message">
+        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent.
     </div>
-</section>
+</div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
