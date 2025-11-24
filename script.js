@@ -122,36 +122,51 @@ document.querySelectorAll(".project-card").forEach((card) => {
 
 
 //  Thank you Message
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
+const form = document.getElementById("contactForm");
+const statusMsg = document.getElementById("form-status");
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const form = e.target;
     const formData = new FormData(form);
 
     try {
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
 
-        if (response.ok) {
-            form.reset();
-            form.style.display = "none";
+      if (response.ok) {
+        form.reset();
 
-            const statusMsg = document.getElementById("form-status");
-            statusMsg.style.display = "block";
+        // Hide form smoothly
+        form.style.opacity = "0";
+        form.style.pointerEvents = "none";
+        form.style.height = "0";
 
-            setTimeout(() => {
-                statusMsg.style.display = "none";
-                form.style.display = "block"; 
-            }, 5000);
+        // Show success message
+        statusMsg.style.display = "block";
+        statusMsg.style.opacity = "1";
 
-        } else {
-            alert("Something went wrong. Please try again.");
-        }
+        // After 5 seconds, fade out success and restore form
+        setTimeout(() => {
+          statusMsg.style.opacity = "0";
+
+          setTimeout(() => {
+            statusMsg.style.display = "none";
+
+            form.style.height = "auto";
+            form.style.opacity = "1";
+            form.style.pointerEvents = "auto";
+          }, 400);
+        }, 5000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
     } catch (err) {
-        alert("Network error. Please try again later.");
+      alert("Network error. Please try again later.");
     }
-});
-
+  });
