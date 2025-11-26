@@ -1421,57 +1421,60 @@ section {
   right: 30px;
   width: 55px;
   height: 55px;
+  border-radius: 12px; 
   background: linear-gradient(135deg, #312e81, #4c1d95, #6d28d9);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   cursor: pointer;
   z-index: 9000;
-
-  /* Initial hidden state */
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px) scale(0.85);
-
   transition:
     opacity 0.35s ease,
     transform 0.35s ease,
     visibility 0.35s ease,
     box-shadow 0.35s ease;
+  overflow: hidden;
+
+  /* position: relative; */
 }
 
-/* Show after scrolling */
+/* Show */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(-5px) scale(1);
 }
 
-.up-arrow-icon {
-  width: 26px;
-  height: 26px;
-  opacity: 0.95;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+.back-to-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: 0.5s;
 }
 
-.back-to-top:hover .up-arrow-icon {
-  transform: translateY(-3px);
-  opacity: 1;
+.back-to-top:hover::after {
+  left: 130%;
 }
 
-
-/* Soft neon glow on hover */
+/* Hover glow */
 .back-to-top:hover {
-  box-shadow:
-    0 0 8px rgba(129, 140, 248, 0.38),
-    0 0 14px rgba(236, 72, 153, 0.30),
-    0 0 18px rgba(6, 182, 212, 0.24);
   transform: translateY(-8px) scale(1.06);
 }
-
 
 /* RESPONSIVE  */
 @media (max-width: 1024px) and (orientation: landscape) {
@@ -1586,6 +1589,10 @@ section {
   .hero-location {
     justify-content: center;
     text-align: center;
+  }
+
+  .about-content {
+    text-align: left;
   }
 
   .profile-photo {
