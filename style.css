@@ -1271,6 +1271,78 @@ section {
   transition: all 0.4s ease;
 }
 
+/* SUCCESS MESSAGE */
+.success-message {
+  background: linear-gradient(145deg, var(--bg-light), var(--bg-lighter));
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  color: var(--text-dark);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInScale 0.4s ease forwards;
+}
+
+.success-message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light),
+    var(--accent-color),
+    var(--secondary-color)
+  );
+  border-radius: 20px 20px 0 0;
+}
+
+.success-message i {
+  font-size: 4rem;
+  color: var(--teal-color);
+  margin-bottom: 1.5rem;
+  display: block;
+  animation: checkmarkBounce 0.6s ease 0.2s both;
+}
+
+.success-message p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes checkmarkBounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* FOOTER */
 .footer {
   background: rgba(10, 10, 15, 0.7);
